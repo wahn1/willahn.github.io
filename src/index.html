@@ -1,12 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Portfolio Page</title>
-    <meta name="description" content="" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will's Website</title>
+    <style>
+        /* Centering text */
+        .center-text {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-  <p>Hello World</p>
-  <a href="about.html">About me!</a>
+    <div class="center-text">
+        <p>Welcome to Will's website</p>
+        <a href="about.html">An Odyssey Of His Mind!</a>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabbed Content</title>
+    <style>
+        /* Styles for tabs */
+        .tab {
+            display: none;
+        }
+
+        .tab-button {
+            cursor: pointer;
+            padding: 10px 20px;
+            border: 10px solid #ccc;
+            background-color: #2B4162;
+            color: white; /* Add text color */
+        }
+
+        .tab-button:hover {
+            background-color: #F5F0F6;
+        }
+
+        /* Center-align the tabs */
+        .tabs-container {
+            text-align: center;
+        }
+
+        /* Active tab */
+        .active-tab {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="tabs-container"> <!-- Wrapping the tabs in a container -->
+        <div id="tabs">
+            <button class="tab-button" onclick="openTab('tab1')">Inspiration</button>
+            <button class="tab-button" onclick="openTab('tab2')">Philosophy</button>
+            <button class="tab-button" onclick="openTab('tab3')">Connection</button>
+            <button class="tab-button" onclick="openTab('tab4')">Experience</button>
+            <button class="tab-button" onclick="openTab('tab5')">Accomplishments</button>
+
+            <div class="tab" id="tab1">
+                <h2>Inspiration</h2>
+                <p>Even as a kid, I’ve always been told that I’ve had a curious mind and it’s always been my greatest asset.
+
+                  I use the question “Why?” as my vehicle to explore my intrinsic curiosity, and I’ve been able to do this with the combination of my majors: understand how we can make processes be more efficient, why we feel and think the ways we do, and discover  patterns that lie within data.
+
+                  My curiosity serves as my motivation to continue to continuously adapt, grow, and develop new ways outside of my comfort zone.
+                  It is my guiding principle in this world to continue to challenge myself and simply remove complacency from my life.
+
+
+                  </p>
+                </p>
+            </div>
+            <div class="tab" id="tab2">
+                <h2>Philosophy</h2>
+                <p>Write your content for Tab 2 here.</p>
+            </div>
+            <div class="tab" id="tab3">
+                <h2>Connection</h2>
+                <p>Write your content for Tab 3 here.</p>
+            </div>
+            <div class="tab" id="tab4">
+                <h2>Experience</h2>
+                <p>Write your content for Tab 4 here.</p>
+            </div>
+            <div class="tab" id="tab5">
+                <h2>Accomplishments</h2>
+                <p>Write your content for Tab 5 here.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(tabId) {
+            // Hide all tabs
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.style.display = 'none';
+            });
+
+            // Show the selected tab
+            const selectedTab = document.getElementById(tabId);
+            if (selectedTab) {
+                selectedTab.style.display = 'block';
+            }
+        }
+
+        // Show the first tab by default
+        openTab('tab1');
+    </script>
 </body>
 </html>
