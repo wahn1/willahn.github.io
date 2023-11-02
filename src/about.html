@@ -1,11 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>QUEST Starter - About Me</title>
-    <meta name="description" content="" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Will's Journey!</title>
+    <style>
+        /* Add some basic styling for the tabs and tab content */
+        .tab-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-  <p>Here is content about myself</p>
+  <header>
+      <h1>Will Ahn's Journey</h1>
+      <p>The Odyssey Begins Here!</p>
+      <p>Are you ready to embark on it?</p>
+  </header>
+
+  <div class="tabs-container">
+      <div id="tabs">
+          <button class="tab-button" onclick="openTab('tab1')">About</button>
+          <button class="tab-button" onclick="openTab('tab2')">Philosophy</button>
+          <button class="tab-button" onclick="openTab('tab3')">Connection</button>
+          <button class="tab-button" onclick="openTab('tab4')">Experience</button>
+          <button class="tab-button" onclick="openTab('tab5')">Accomplishments</button>
+          <button class="tab-button" onclick="openLinkedInPage()">LinkedIn Page</button>
+          <div class="center-text">
+          </div>
+          <h2>About</h2>
+          <p class="tab-content" id="tab1">My ame is Will Ahn, and I am senior Information Systems major at the University of Maryland's Robert H. Smith School of Business. As you might have guessed already, I am a part of the QUEST Honors Program where this multidisciplinary program combines the best and brightest from the University across the Business, Engineering, and Natural Sciences Schools</p>
+          <h2>Philosophy</h2>
+          <p class="tab-content" id="tab2">My Philosphy follows a growth mindset and continously trying to find new ways to innovate myself and further engage with the world.</p>
+          <h2>Connection</h2>
+          <p class="tab-content" id="tab3">I'm affiliated with so many different programs at UMD, but I would love to highlight my work at the Omicron Delta Kappa Leadership Honor Society, Snider Consulting Group, and Adventure Program at Eppley!</p>
+          <h2>Experience</h2>
+          <p class="tab-content" id="tab4">My experience ranges across consulting, business development, and social impact work. However, my true calling is towards creating work that leaves a positive societal impact in the world and this involves going into government consulting.
+
+On a side note: my photo, the Working man was the U.S. Congressional Art District Winner for my local area, and it was hung up in the U.S. Capitol Building!</p>
+          <img src="images/William Ahn _The Working Man_.jpg" alt="Will's Congressional Photo" width="250" height="300">
+          <h2>Accomplishments</h2>
+          <p class="tab-content" id="tab5">My proudest accomplishment was being able to be involved with the Adventure Program at Eppley where I've been able to explore the outdoors and love every moment of it!.</p>
+          <h2>LinkedIn Page</h2>
+          <p class="tab-content" id="tab6">Write your content for LinkedIn Page here.</p>
+      </div>
+  </div>
+
+  <script>
+      function openTab(tabId) {
+          // Hide all tab contents
+          var tabContents = document.getElementsByClassName("tab-content");
+          for (var i = 0; i < tabContents.length; i++) {
+              tabContents[i].style.display = "none";
+          }
+
+          // Show the selected tab content
+          document.getElementById(tabId).style.display = "block";
+
+          // Scroll to the selected tab content smoothly
+          document.getElementById(tabId).scrollIntoView({ behavior: "smooth" });
+      }
+
+      function openLinkedInPage() {
+          window.location.href = "https://www.linkedin.com/in/will-ahn/";
+      }
+
+  </script>
 </body>
 </html>
