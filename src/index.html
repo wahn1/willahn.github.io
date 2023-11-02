@@ -5,29 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Will's Website</title>
     <style>
+        /* Set the background to black and font color to white */
+        body {
+            background-color: black;
+            color: white;
+        }
+
         /* Centering text */
         .center-text {
             text-align: center;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             font-size: x-large;
         }
-    </style>
-</head>
-<body>
-    <div class="center-text">
-        <p>Will's Mind</p>
-        <a href="about.html">An Odyssey Of His Mind!</a>
-    </div>
-</body>
 
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabbed Content</title>
-    <style>
         /* Styles for tabs */
         .tab {
             display: none;
@@ -39,8 +29,7 @@
             padding: 10px 20px;
             border: 10px solid #ccc;
             background-color: #2B4162;
-
-            color: white; /* Add text color */
+            color: white;
         }
 
         .tab-button:hover {
@@ -55,12 +44,22 @@
         /* Active tab */
         .active-tab {
             display: block;
+        }
 
+        /* Added styles for the image */
+        img {
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
 <body>
+    <div class="center-text">
+        <p>Will's Mind</p>
+        <a href="about.html">An Odyssey Of His Mind!</a>
+
     </div>
+
     <div class="tabs-container"> <!-- Wrapping the tabs in a container -->
         <div id="tabs">
             <button class="tab-button" onclick="openTab('tab1')">Inspiration</button>
@@ -71,29 +70,15 @@
 
             <div class="tab" id="tab1">
                 <h2>Inspiration</h2>
-                <p>Even as a kid, I’ve always been told that I’ve had a curious mind and it’s always been my greatest asset.
+                <p>Even as a kid, I’ve always been told that I’ve had a curious mind, and it’s always been my greatest asset.
 
-                  I use the question “Why?” as my vehicle to explore my intrinsic curiosity, and I’ve been able to do this with the combination of my majors: understand how we can make processes be more efficient, why we feel and think the ways we do, and discover  patterns that lie within data.
+                  I use the question “Why?” as my vehicle to explore my intrinsic curiosity, and I’ve been able to do this with the combination of my majors: understanding how we can make processes more efficient, why we feel and think the ways we do, and discovering patterns that lie within data.
 
-                  My curiosity serves as my motivation to continue to continuously adapt, grow, and develop new ways outside of my comfort zone.
-                  It is my guiding principle in this world to continue to challenge myself and simply remove complacency from my life.
+                  My curiosity serves as my motivation to continuously adapt, grow, and develop new ways outside of my comfort zone. It is my guiding principle in this world to continue to challenge myself and simply remove complacency from my life.
 
-                  <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>Will's Website</title>
-                </head>
-                <body>
-                    <div class="center-text">
-                        <img src="images/William Ahn _The Working Man_.jpg" alt="Will's Congressional Photo " width="250" height="300">
-<div class="center-text">
-                      </div>
-
-                </body>
-                </html>
-
-
-                  </p>
+                  <div class="center-text">
+                    <img src="images/William Ahn _The Working Man_.jpg" alt="Will's Congressional Photo" width="250" height="300">
+                  </div>
                 </p>
             </div>
             <div class="tab" id="tab2">
@@ -135,5 +120,3 @@
     </script>
 </body>
 </html>
-
-
